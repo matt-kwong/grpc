@@ -35,4 +35,7 @@ cd $(dirname $0)/../../..
 
 git submodule update --init
 
+# download fuzzer docker image from dockerhub
+export DOCKERHUB_ORGANIZATION=grpctesting
+
 tools/jenkins/run_jenkins_matrix.sh -f portability linux --build_only
