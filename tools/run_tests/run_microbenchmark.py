@@ -258,6 +258,9 @@ try:
       if diff:
         heading('Performance diff: %s' % bm_name)
         text(diff)
+        subprocess.call(['tools/jenkins/comment_on_pr.sh',
+                         '"Performance diff: %s\\n%s"' % (bm_name, diff.replace('\n', '\\n'))],
+                        stdout=subprocess.PIPE)
 finally:
   index_html += "</body>\n</html>\n"
   with open('reports/index.html', 'w') as f:
