@@ -1191,7 +1191,7 @@ argp.add_argument('--build_only',
                   default=False,
                   action='store_const',
                   const=True,
-                  help='Perform all the build steps but dont run any tests.')
+                  help='Perform all the build steps but don\'t run any tests.')
 argp.add_argument('--measure_cpu_costs', default=False, action='store_const', const=True,
                   help='Measure the cpu costs of tests')
 argp.add_argument('--update_submodules', default=[], nargs='*',
@@ -1206,10 +1206,15 @@ argp.add_argument('--quiet_success',
                   default=False,
                   action='store_const',
                   const=True,
-                  help='Dont print anything when a test passes. Passing tests also will not be reported in XML report. ' +
+                  help='Don\'t print anything when a test passes. Passing tests also will not be reported in XML report. ' +
                        'Useful when running many iterations of each test (argument -n).')
 argp.add_argument('--force_default_poller', default=False, action='store_const', const=True,
                   help='Dont try to iterate over many polling strategies when they exist')
+argp.add_argument('--bq_result_table',
+                  default='',
+                  type=str,
+                  nargs=1,
+                  help='Upload test results to a specified BQ table.')
 args = argp.parse_args()
 
 if args.force_default_poller:
@@ -1505,11 +1510,14 @@ def _build_and_run(
                 'FLAKE', '%s [%d/%d runs flaked]' % (k, num_failures, num_runs),
                 do_newline=True)
   finally:
+    print('dfggggggggggg')
     for antagonist in antagonists:
       antagonist.kill()
     if xml_report and resultset:
+      report_utils.render_json_report(resultset)
       report_utils.render_junit_xml_report(resultset, xml_report,
-                                           suite_name=args.report_suite_name)
+                                          suite_name=args.report_suite_name)
+
 
   number_failures, _ = jobset.run(
       post_tests_steps, maxjobs=1, stop_on_failure=True,

@@ -58,6 +58,21 @@ def _filter_msg(msg, output_format):
     return msg
 
 
+def render_json_report(resultset):
+  """Generate JSON formatted results for BQ uploads."""
+  print(dir(resultset))
+  for shortname, results in six.iteritems(resultset):
+    print('shortname %s' % shortname)
+    print('results %s' % results)
+    for result in results:
+      print('result %s' % str(result))
+      print('cpu_measured %s' % result.cpu_measured)
+      print('cpu_estimated %s' % result.cpu_estimated)
+      print('elaped_time %s' % result.elapsed_time)
+      print('state %s' % result.state)
+
+
+
 def render_junit_xml_report(resultset, xml_report, suite_package='grpc',
                             suite_name='tests'):
   """Generate JUnit-like XML report."""
@@ -79,6 +94,12 @@ def render_junit_xml_report(resultset, xml_report, suite_package='grpc',
         ET.SubElement(xml_test, 'skipped', message='Skipped')
   tree = ET.ElementTree(root)
   tree.write(xml_report, encoding='UTF-8')
+
+
+
+
+
+
 
 def render_interop_html_report(
   client_langs, server_langs, test_cases, auth_test_cases, http2_cases,

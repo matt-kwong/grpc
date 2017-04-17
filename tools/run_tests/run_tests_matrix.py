@@ -385,6 +385,11 @@ if __name__ == "__main__":
   argp.add_argument('-n', '--runs_per_test', default=1, type=_runs_per_test_type,
                     help='How many times to run each tests. >1 runs implies ' +
                     'omitting passing test from the output & reports.')
+  argp.add_argument('--bq_result_table',
+                    default='',
+                    type=str,
+                    nargs='?',
+                    help='Upload test results to a specified BQ table.')
   args = argp.parse_args()
 
   extra_args = []
@@ -396,6 +401,10 @@ if __name__ == "__main__":
     extra_args.append('-n')
     extra_args.append('%s' % args.runs_per_test)
     extra_args.append('--quiet_success')
+  if args.bq_result_table:
+    extra_args.append('--bq_result_table')
+    extra_args.append('%s' % args.bq_result_table)
+    extra_args.append('--measure_cpu_costs')
 
   all_jobs = _create_test_jobs(extra_args=extra_args, inner_jobs=args.inner_jobs) + \
              _create_portability_test_jobs(extra_args=extra_args, inner_jobs=args.inner_jobs)
@@ -448,6 +457,8 @@ if __name__ == "__main__":
                                        newline_on_success=True,
                                        travis=True,
                                        maxjobs=args.jobs)
+  print('Trying to print JSON')
+  report_utils.render_json_report(resultset)
   # Merge skipped tests into results to show skipped tests on report.xml
   if skipped_jobs:
     ignored_num_skipped_failures, skipped_results = jobset.run(
@@ -455,6 +466,7 @@ if __name__ == "__main__":
     resultset.update(skipped_results)
   report_utils.render_junit_xml_report(resultset, 'report_%s' % _REPORT_SUFFIX,
                                        suite_name='aggregate_tests')
+  report_utils.render_json_report(resultset)
 
   if num_failures == 0:
     jobset.message('SUCCESS', 'All run_tests.py instance finished successfully.',

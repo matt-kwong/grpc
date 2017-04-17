@@ -58,6 +58,7 @@ Gemfile.lock
 report.xml
 latency_trace.txt
 latency_trace.*.txt
+report_*.xml
 
 # port server log
 portlog.txt
