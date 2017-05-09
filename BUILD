@@ -73,6 +73,7 @@ grpc_cc_libraries(
     deps = [
         "census",
         "grpc_base",
+        "grpc_base++",
         "grpc_lb_policy_pick_first",
         "grpc_lb_policy_round_robin",
         "grpc_load_reporting",
@@ -105,6 +106,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_transport_chttp2_client_secure",
         "grpc_transport_cronet_client_secure",
         "grpc_http_filters",
@@ -317,6 +319,7 @@ grpc_cc_library(
     ],
     deps = [
         "grpc_base",
+        "grpc_base++",
     ],
 )
 
@@ -547,7 +550,6 @@ grpc_cc_library(
         "src/core/lib/surface/completion_queue.c",
         "src/core/lib/surface/completion_queue_factory.c",
         "src/core/lib/surface/event_string.c",
-        "src/core/lib/surface/lame_client.cc",
         "src/core/lib/surface/metadata_array.c",
         "src/core/lib/surface/server.c",
         "src/core/lib/surface/validate_metadata.c",
@@ -656,7 +658,6 @@ grpc_cc_library(
         "src/core/lib/surface/completion_queue_factory.h",
         "src/core/lib/surface/event_string.h",
         "src/core/lib/surface/init.h",
-        "src/core/lib/surface/lame_client.h",
         "src/core/lib/surface/server.h",
         "src/core/lib/surface/validate_metadata.h",
         "src/core/lib/transport/bdp_estimator.h",
@@ -690,6 +691,24 @@ grpc_cc_library(
         "include/grpc/slice_buffer.h",
         "include/grpc/status.h",
     ],
+    deps = [
+        "gpr_base",
+        "grpc_codegen",
+    ],
+)
+
+grpc_cc_library(
+    name = "grpc_base++",
+    srcs = [
+        "src/core/lib/surface/lame_client.cc",
+    ],
+    hdrs = [
+        "src/core/lib/surface/lame_client.h",
+    ],
+    external_deps = [
+        "zlib",
+    ],
+    language = "c++",
     deps = [
         "gpr_base",
         "grpc_codegen",
@@ -743,6 +762,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_deadline_filter",
     ],
 )
@@ -758,6 +778,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
     ],
 )
 
@@ -772,6 +793,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
     ],
 )
 
@@ -786,6 +808,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
     ],
 )
 
@@ -805,6 +828,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
     ],
 )
 
@@ -850,6 +874,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
     ],
 )
@@ -878,6 +903,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
         "grpc_secure",
     ],
@@ -891,6 +917,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
     ],
 )
@@ -903,6 +930,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
     ],
 )
@@ -920,6 +948,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
     ],
 )
 
@@ -931,6 +960,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
     ],
 )
@@ -952,6 +982,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
     ],
 )
@@ -964,6 +995,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
     ],
 )
@@ -1023,6 +1055,7 @@ grpc_cc_library(
     ],
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_transport_chttp2_alpn",
         "tsi",
     ],
@@ -1077,6 +1110,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_transport_chttp2_alpn",
         "grpc_http_filters",
     ],
@@ -1107,6 +1141,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
         "grpc_transport_chttp2",
     ],
@@ -1121,6 +1156,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
         "grpc_transport_chttp2",
         "grpc_transport_chttp2_client_connector",
@@ -1135,6 +1171,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_client_channel",
         "grpc_secure",
         "grpc_transport_chttp2",
@@ -1153,6 +1190,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_transport_chttp2",
     ],
 )
@@ -1166,6 +1204,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_transport_chttp2",
         "grpc_transport_chttp2_server",
     ],
@@ -1179,6 +1218,7 @@ grpc_cc_library(
     language = "c",
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_secure",
         "grpc_transport_chttp2",
         "grpc_transport_chttp2_server",
@@ -1204,6 +1244,7 @@ grpc_cc_library(
     ],
     deps = [
         "grpc_base",
+        "grpc_base++",
         "grpc_transport_chttp2",
     ],
 )

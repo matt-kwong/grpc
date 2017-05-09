@@ -54,6 +54,7 @@ filegroups:
   plugin: census_grpc_plugin
   uses:
   - grpc_base
+  - grpc_base++
   - nanopb
 - name: gpr_base
   public_headers:
@@ -266,7 +267,6 @@ filegroups:
   - src/core/lib/surface/completion_queue_factory.h
   - src/core/lib/surface/event_string.h
   - src/core/lib/surface/init.h
-  - src/core/lib/surface/lame_client.h
   - src/core/lib/surface/server.h
   - src/core/lib/surface/validate_metadata.h
   - src/core/lib/transport/bdp_estimator.h
@@ -386,7 +386,6 @@ filegroups:
   - src/core/lib/surface/completion_queue.c
   - src/core/lib/surface/completion_queue_factory.c
   - src/core/lib/surface/event_string.c
-  - src/core/lib/surface/lame_client.cc
   - src/core/lib/surface/metadata_array.c
   - src/core/lib/surface/server.c
   - src/core/lib/surface/validate_metadata.c
@@ -452,6 +451,7 @@ filegroups:
   plugin: grpc_client_channel
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_deadline_filter
 - name: grpc_codegen
   public_headers:
@@ -473,6 +473,7 @@ filegroups:
   plugin: grpc_deadline_filter
   uses:
   - grpc_base
+  - grpc_base++
 - name: grpc_http_filters
   headers:
   - src/core/ext/filters/http/client/http_client_filter.h
@@ -486,6 +487,7 @@ filegroups:
   plugin: grpc_http_filters
   uses:
   - grpc_base
+  - grpc_base++
 - name: grpc_lb_policy_grpclb
   headers:
   - src/core/ext/filters/client_channel/lb_policy/grpclb/client_load_reporting_filter.h
@@ -504,6 +506,7 @@ filegroups:
   plugin: grpc_lb_policy_grpclb
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
   - nanopb
 - name: grpc_lb_policy_grpclb_secure
@@ -524,6 +527,7 @@ filegroups:
   plugin: grpc_lb_policy_grpclb
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_secure
   - grpc_client_channel
   - nanopb
@@ -533,6 +537,7 @@ filegroups:
   plugin: grpc_lb_policy_pick_first
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_lb_policy_round_robin
   src:
@@ -540,6 +545,7 @@ filegroups:
   plugin: grpc_lb_policy_round_robin
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_load_reporting
   headers:
@@ -551,6 +557,7 @@ filegroups:
   plugin: grpc_load_reporting_plugin
   uses:
   - grpc_base
+  - grpc_base++
 - name: grpc_max_age_filter
   headers:
   - src/core/ext/filters/max_age/max_age_filter.h
@@ -559,6 +566,7 @@ filegroups:
   plugin: grpc_max_age_filter
   uses:
   - grpc_base
+  - grpc_base++
 - name: grpc_message_size_filter
   headers:
   - src/core/ext/filters/message_size/message_size_filter.h
@@ -567,6 +575,7 @@ filegroups:
   plugin: grpc_message_size_filter
   uses:
   - grpc_base
+  - grpc_base++
 - name: grpc_resolver_dns_ares
   headers:
   - src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver.h
@@ -578,6 +587,7 @@ filegroups:
   plugin: grpc_resolver_dns_ares
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_resolver_dns_native
   src:
@@ -585,6 +595,7 @@ filegroups:
   plugin: grpc_resolver_dns_native
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_resolver_sockaddr
   src:
@@ -592,6 +603,7 @@ filegroups:
   plugin: grpc_resolver_sockaddr
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_secure
   public_headers:
@@ -644,6 +656,7 @@ filegroups:
   secure: true
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_transport_chttp2_alpn
   - tsi
 - name: grpc_test_util_base
@@ -729,6 +742,7 @@ filegroups:
   plugin: grpc_chttp2_plugin
   uses:
   - grpc_base
+  - grpc_base++
   - grpc_transport_chttp2_alpn
   - grpc_http_filters
 - name: grpc_transport_chttp2_alpn
@@ -746,6 +760,7 @@ filegroups:
   uses:
   - grpc_transport_chttp2
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_transport_chttp2_client_insecure
   src:
@@ -755,6 +770,7 @@ filegroups:
   - grpc_transport_chttp2_client_connector
   - grpc_transport_chttp2
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
 - name: grpc_transport_chttp2_client_secure
   src:
@@ -762,6 +778,7 @@ filegroups:
   uses:
   - grpc_transport_chttp2
   - grpc_base
+  - grpc_base++
   - grpc_client_channel
   - grpc_secure
   - grpc_transport_chttp2_client_connector
@@ -773,6 +790,7 @@ filegroups:
   uses:
   - grpc_transport_chttp2
   - grpc_base
+  - grpc_base++
 - name: grpc_transport_chttp2_server_insecure
   src:
   - src/core/ext/transport/chttp2/server/insecure/server_chttp2.c
@@ -780,6 +798,7 @@ filegroups:
   uses:
   - grpc_transport_chttp2
   - grpc_base
+  - grpc_base++
   - grpc_transport_chttp2_server
 - name: grpc_transport_chttp2_server_secure
   src:
@@ -787,6 +806,7 @@ filegroups:
   uses:
   - grpc_transport_chttp2
   - grpc_base
+  - grpc_base++
   - grpc_secure
   - grpc_transport_chttp2_server
 - name: grpc_transport_cronet_client_secure
@@ -803,6 +823,7 @@ filegroups:
   - src/core/ext/transport/cronet/transport/cronet_transport.c
   filegroups:
   - grpc_base
+  - grpc_base++
   - grpc_transport_chttp2
   - grpc_http_filters
 - name: nanopb
@@ -924,6 +945,7 @@ filegroups:
   uses:
   - grpc++_codegen_base
   - grpc_base
+  - grpc_base++
   - nanopb
 - name: grpc++_codegen_base
   language: c++
@@ -987,6 +1009,16 @@ filegroups:
   - include/grpc++/test/server_context_test_spouse.h
   deps:
   - grpc++
+- name: grpc_base++
+  language: c++
+  headers:
+  - src/core/lib/surface/lame_client.h
+  src:
+  - src/core/lib/surface/lame_client.cc
+  deps:
+  - gpr
+  uses:
+  - grpc_codegen
 libs:
 - name: gpr
   build: all
@@ -1016,6 +1048,7 @@ libs:
   dll: true
   filegroups:
   - grpc_base
+  - grpc_base++
   - grpc_transport_chttp2_server_secure
   - grpc_transport_chttp2_client_secure
   - grpc_transport_chttp2_server_insecure
@@ -1048,6 +1081,7 @@ libs:
   dll: true
   filegroups:
   - grpc_base
+  - grpc_base++
   - grpc_transport_cronet_client_secure
   - grpc_transport_chttp2_client_secure
   - grpc_load_reporting
@@ -1095,6 +1129,7 @@ libs:
   filegroups:
   - grpc_test_util_base
   - grpc_base
+  - grpc_base++
   vs_project_guid: '{17BCAFC0-5FDC-4C94-AEB9-95F3E220614B}'
 - name: grpc_test_util_unsecure
   build: private
@@ -1118,6 +1153,7 @@ libs:
   dll: true
   filegroups:
   - grpc_base
+  - grpc_base++
   - grpc_transport_chttp2_server_insecure
   - grpc_transport_chttp2_client_insecure
   - grpc_resolver_dns_ares

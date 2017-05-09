@@ -5738,6 +5738,7 @@
       "census", 
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_deadline_filter", 
       "grpc_lb_policy_grpclb_secure", 
       "grpc_lb_policy_pick_first", 
@@ -5768,6 +5769,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_load_reporting", 
       "grpc_transport_chttp2_client_secure", 
       "grpc_transport_cronet_client_secure"
@@ -5801,6 +5803,7 @@
       "gpr_test_util", 
       "grpc", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_test_util_base"
     ], 
     "headers": [
@@ -5843,6 +5846,7 @@
       "census", 
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_deadline_filter", 
       "grpc_lb_policy_grpclb", 
       "grpc_lb_policy_pick_first", 
@@ -7472,6 +7476,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "nanopb"
     ], 
     "headers": [
@@ -7819,7 +7824,6 @@
       "src/core/lib/surface/completion_queue_factory.h", 
       "src/core/lib/surface/event_string.h", 
       "src/core/lib/surface/init.h", 
-      "src/core/lib/surface/lame_client.h", 
       "src/core/lib/surface/server.h", 
       "src/core/lib/surface/validate_metadata.h", 
       "src/core/lib/transport/bdp_estimator.h", 
@@ -8042,8 +8046,6 @@
       "src/core/lib/surface/event_string.c", 
       "src/core/lib/surface/event_string.h", 
       "src/core/lib/surface/init.h", 
-      "src/core/lib/surface/lame_client.cc", 
-      "src/core/lib/surface/lame_client.h", 
       "src/core/lib/surface/metadata_array.c", 
       "src/core/lib/surface/server.c", 
       "src/core/lib/surface/server.h", 
@@ -8085,6 +8087,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_deadline_filter"
     ], 
     "headers": [
@@ -8186,7 +8189,8 @@
   {
     "deps": [
       "gpr", 
-      "grpc_base"
+      "grpc_base", 
+      "grpc_base++"
     ], 
     "headers": [
       "src/core/ext/filters/deadline/deadline_filter.h"
@@ -8204,7 +8208,8 @@
   {
     "deps": [
       "gpr", 
-      "grpc_base"
+      "grpc_base", 
+      "grpc_base++"
     ], 
     "headers": [
       "src/core/ext/filters/http/client/http_client_filter.h", 
@@ -8230,6 +8235,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel", 
       "nanopb"
     ], 
@@ -8265,6 +8271,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel", 
       "grpc_secure", 
       "nanopb"
@@ -8301,6 +8308,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel"
     ], 
     "headers": [], 
@@ -8317,6 +8325,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel"
     ], 
     "headers": [], 
@@ -8332,7 +8341,8 @@
   {
     "deps": [
       "gpr", 
-      "grpc_base"
+      "grpc_base", 
+      "grpc_base++"
     ], 
     "headers": [
       "src/core/ext/filters/load_reporting/load_reporting.h", 
@@ -8353,7 +8363,8 @@
   {
     "deps": [
       "gpr", 
-      "grpc_base"
+      "grpc_base", 
+      "grpc_base++"
     ], 
     "headers": [
       "src/core/ext/filters/max_age/max_age_filter.h"
@@ -8371,7 +8382,8 @@
   {
     "deps": [
       "gpr", 
-      "grpc_base"
+      "grpc_base", 
+      "grpc_base++"
     ], 
     "headers": [
       "src/core/ext/filters/message_size/message_size_filter.h"
@@ -8390,6 +8402,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel"
     ], 
     "headers": [
@@ -8413,6 +8426,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel"
     ], 
     "headers": [], 
@@ -8429,6 +8443,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel"
     ], 
     "headers": [], 
@@ -8445,6 +8460,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_transport_chttp2_alpn", 
       "tsi"
     ], 
@@ -8586,6 +8602,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_http_filters", 
       "grpc_transport_chttp2_alpn"
     ], 
@@ -8679,6 +8696,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel", 
       "grpc_transport_chttp2"
     ], 
@@ -8699,6 +8717,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel", 
       "grpc_transport_chttp2", 
       "grpc_transport_chttp2_client_connector"
@@ -8718,6 +8737,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_client_channel", 
       "grpc_secure", 
       "grpc_transport_chttp2", 
@@ -8737,6 +8757,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_transport_chttp2"
     ], 
     "headers": [
@@ -8756,6 +8777,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_transport_chttp2", 
       "grpc_transport_chttp2_server"
     ], 
@@ -8774,6 +8796,7 @@
     "deps": [
       "gpr", 
       "grpc_base", 
+      "grpc_base++", 
       "grpc_secure", 
       "grpc_transport_chttp2", 
       "grpc_transport_chttp2_server"
@@ -8791,6 +8814,7 @@
   {
     "deps": [
       "grpc_base", 
+      "grpc_base++", 
       "grpc_http_filters", 
       "grpc_transport_chttp2"
     ], 
@@ -8866,6 +8890,7 @@
       "gpr", 
       "grpc++_codegen_base", 
       "grpc_base", 
+      "grpc_base++", 
       "nanopb"
     ], 
     "headers": [
@@ -9160,6 +9185,24 @@
     "src": [
       "include/grpc++/test/mock_stream.h", 
       "include/grpc++/test/server_context_test_spouse.h"
+    ], 
+    "third_party": false, 
+    "type": "filegroup"
+  }, 
+  {
+    "deps": [
+      "gpr", 
+      "grpc_codegen"
+    ], 
+    "headers": [
+      "src/core/lib/surface/lame_client.h"
+    ], 
+    "is_filegroup": true, 
+    "language": "c++", 
+    "name": "grpc_base++", 
+    "src": [
+      "src/core/lib/surface/lame_client.cc", 
+      "src/core/lib/surface/lame_client.h"
     ], 
     "third_party": false, 
     "type": "filegroup"

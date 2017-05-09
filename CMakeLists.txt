@@ -1020,7 +1020,6 @@ add_library(grpc
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -1038,6 +1037,7 @@ add_library(grpc
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
   src/core/ext/transport/chttp2/server/secure/server_secure_chttp2.c
   src/core/ext/transport/chttp2/transport/bin_decoder.c
   src/core/ext/transport/chttp2/transport/bin_encoder.c
@@ -1348,7 +1348,6 @@ add_library(grpc_cronet
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -1366,6 +1365,7 @@ add_library(grpc_cronet
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
   src/core/ext/transport/cronet/client/secure/cronet_channel_create.c
   src/core/ext/transport/cronet/transport/cronet_api_dummy.c
   src/core/ext/transport/cronet/transport/cronet_transport.c
@@ -1659,7 +1659,6 @@ add_library(grpc_test_util
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -1677,6 +1676,7 @@ add_library(grpc_test_util
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
 )
 
 if(WIN32 AND MSVC)
@@ -1915,7 +1915,6 @@ add_library(grpc_unsecure
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -1933,6 +1932,7 @@ add_library(grpc_unsecure
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
   src/core/ext/transport/chttp2/server/insecure/server_chttp2.c
   src/core/ext/transport/chttp2/server/insecure/server_chttp2_posix.c
   src/core/ext/transport/chttp2/transport/bin_decoder.c
@@ -2336,7 +2336,6 @@ add_library(grpc++
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -2354,6 +2353,7 @@ add_library(grpc++
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
   third_party/nanopb/pb_common.c
   third_party/nanopb/pb_decode.c
   third_party/nanopb/pb_encode.c
@@ -2661,7 +2661,6 @@ add_library(grpc++_cronet
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -2679,6 +2678,7 @@ add_library(grpc++_cronet
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
   third_party/nanopb/pb_common.c
   third_party/nanopb/pb_decode.c
   third_party/nanopb/pb_encode.c
@@ -3430,7 +3430,6 @@ add_library(grpc++_unsecure
   src/core/lib/surface/completion_queue.c
   src/core/lib/surface/completion_queue_factory.c
   src/core/lib/surface/event_string.c
-  src/core/lib/surface/lame_client.cc
   src/core/lib/surface/metadata_array.c
   src/core/lib/surface/server.c
   src/core/lib/surface/validate_metadata.c
@@ -3448,6 +3447,7 @@ add_library(grpc++_unsecure
   src/core/lib/transport/timeout_encoding.c
   src/core/lib/transport/transport.c
   src/core/lib/transport/transport_op_string.c
+  src/core/lib/surface/lame_client.cc
   third_party/nanopb/pb_common.c
   third_party/nanopb/pb_decode.c
   third_party/nanopb/pb_encode.c

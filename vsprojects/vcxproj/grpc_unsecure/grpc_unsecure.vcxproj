@@ -379,7 +379,6 @@
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\completion_queue_factory.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\event_string.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\init.h" />
-    <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\lame_client.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\server.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\validate_metadata.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\transport\bdp_estimator.h" />
@@ -396,6 +395,7 @@
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\transport\timeout_encoding.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\transport\transport.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\lib\transport\transport_impl.h" />
+    <ClInclude Include="$(SolutionDir)\..\src\core\lib\surface\lame_client.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\ext\transport\chttp2\transport\bin_decoder.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\ext\transport\chttp2\transport\bin_encoder.h" />
     <ClInclude Include="$(SolutionDir)\..\src\core\ext\transport\chttp2\transport\chttp2_transport.h" />
@@ -682,8 +682,6 @@
     </ClCompile>
     <ClCompile Include="$(SolutionDir)\..\src\core\lib\surface\event_string.c">
     </ClCompile>
-    <ClCompile Include="$(SolutionDir)\..\src\core\lib\surface\lame_client.cc">
-    </ClCompile>
     <ClCompile Include="$(SolutionDir)\..\src\core\lib\surface\metadata_array.c">
     </ClCompile>
     <ClCompile Include="$(SolutionDir)\..\src\core\lib\surface\server.c">
@@ -717,6 +715,8 @@
     <ClCompile Include="$(SolutionDir)\..\src\core\lib\transport\transport.c">
     </ClCompile>
     <ClCompile Include="$(SolutionDir)\..\src\core\lib\transport\transport_op_string.c">
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\..\src\core\lib\surface\lame_client.cc">
     </ClCompile>
     <ClCompile Include="$(SolutionDir)\..\src\core\ext\transport\chttp2\server\insecure\server_chttp2.c">
     </ClCompile>

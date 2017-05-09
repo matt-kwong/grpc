@@ -190,7 +190,6 @@ if test "$PHP_GRPC" != "no"; then
     src/core/lib/surface/completion_queue.c \
     src/core/lib/surface/completion_queue_factory.c \
     src/core/lib/surface/event_string.c \
-    src/core/lib/surface/lame_client.cc \
     src/core/lib/surface/metadata_array.c \
     src/core/lib/surface/server.c \
     src/core/lib/surface/validate_metadata.c \
@@ -208,6 +207,7 @@ if test "$PHP_GRPC" != "no"; then
     src/core/lib/transport/timeout_encoding.c \
     src/core/lib/transport/transport.c \
     src/core/lib/transport/transport_op_string.c \
+    src/core/lib/surface/lame_client.cc \
     src/core/ext/transport/chttp2/server/secure/server_secure_chttp2.c \
     src/core/ext/transport/chttp2/transport/bin_decoder.c \
     src/core/ext/transport/chttp2/transport/bin_encoder.c \
