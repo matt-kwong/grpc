@@ -39,6 +39,10 @@ date
 pip install google-api-python-client --user python
 export GOOGLE_APPLICATION_CREDENTIALS=${KOKORO_GFILE_DIR}/GrpcTesting-d0eeee2db331.json
 
+brew config
+brew update
+brew install jq
+
 # If this is a PR using RUN_TESTS_FLAGS var, then add flags to filter tests
 # TODO(matt-kwong): enable after fixing brew issue
 # if [ -n "$KOKORO_GITHUB_PULL_REQUEST_NUMBER" ] && [ -n "$RUN_TESTS_FLAGS" ]; then
