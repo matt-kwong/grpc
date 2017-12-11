@@ -23,5 +23,6 @@ def grpc_fuzzer(name, corpus, srcs = [], deps = [], **kwargs):
     external_deps = [
       'gtest',
     ],
+    tags = ["fuzzer"],
     **kwargs
   )
