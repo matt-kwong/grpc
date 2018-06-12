@@ -71,8 +71,8 @@ clang --version
 sudo xcode-select -switch /Applications/Xcode_8.2.1.app/Contents/Developer
 clang --version
 # set xcode version for Obj-C tests
-sudo xcode-select -switch /Applications/Xcode_9.2.app/Contents/Developer/
-clang --version
+# sudo xcode-select -switch /Applications/Xcode_9.2.app/Contents/Developer/
+# clang --version
 
 # Disable some unwanted dotnet options
 export NUGET_XMLDOC_MODE=skip
